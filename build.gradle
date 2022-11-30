@@ -1,0 +1,22 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/presets'
+            srcDir 'src/main/production'
+        }
+    }
+}
+
+dependencies {
+    implementation group: 'org.processing', name: 'core', version: '3.3.7'
+    testImplementation('junit:junit:4.13')
+}
